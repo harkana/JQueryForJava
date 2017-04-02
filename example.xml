@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <users>
   <user id="1">
-    <nom>simoes</nom>
-    <prenom>thomas</prenom>
+    <nom>bidule</nom>
+    <prenom>chouette</prenom>
   </user>
   <user id="2">
-    <nom>simoes</nom>
-    <prenom>lea</prenom>
+    <nom>pipi</nom>
+    <prenom>prout</prenom>
   </user>
 </users>
