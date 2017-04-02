@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<users>
+  <user id="1">
+    <name>Uzumaki</name>
+    <firstname>Naruto</firstname>
+  </user>
+  <user id="2">
+    <name>Norris</name>
+    <firstname>Chuck</firstname>
+  </user>
+  <user id="3">
+    <name>Stark</name>
+    <firstname>Tony</firstname>
+  </user>
+  <user id="4">
+    <name>Lee</name>
+    <firstname>Bruce</firstname>
+  </user>
+</users>
