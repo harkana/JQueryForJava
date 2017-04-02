@@ -58,6 +58,7 @@ public class JQuerySelectorsImpl implements JQuerySelectors {
 			allLexemes.add(new ArrayList<EntryDom>(lexemes));
 		});
 		entries = allLexemes;
+		System.out.println(entries);
 	}
 
 }

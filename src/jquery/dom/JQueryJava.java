@@ -53,7 +53,10 @@ public class JQueryJava {
 			System.out.println("Error : " + e.getMessage());
 		}
 		try {
-			return (Files.newOutputStream(Paths.get("example.xml"), StandardOpenOption.WRITE, StandardOpenOption.TRUNCATE_EXISTING));
+			return (Files.newOutputStream(Paths.get("example.xml"), 
+					StandardOpenOption.CREATE, 
+					StandardOpenOption.WRITE,
+					StandardOpenOption.TRUNCATE_EXISTING));
 		} catch (IOException e) {
 			System.out.println("Error : " + e.getMessage());
 			return (null);
@@ -68,6 +71,7 @@ public class JQueryJava {
 		JQuerySelectors selectors;
 		JQuerySelectedElement selected;
 		
+		this.selectedElements.clear();
 		selectors = new JQuerySelectorsImpl();
 		selected = new JQuerySelectedElementImpl();	
 		selectors.transform(str);
@@ -98,8 +102,8 @@ public class JQueryJava {
              List<Element> newElements;
              
              newElements = new ArrayList<Element>();
-        	 newElements.add(element);
-        	 newElements.addAll(select.getChildren());
+        	 newElements.add(element.clone());
+        	 newElements.addAll(new ArrayList<Element>(select.getChildren()));
         	 select.getChildren().clear();
         	 select.getChildren().addAll(newElements);
          });
@@ -133,8 +137,8 @@ public class JQueryJava {
 	}
 
 	public String nodeName() {
-		if (this.selectedElements.size() == 0) {
-			return (null);
+		if (this.selectedElements.size() != 1) {
+			return ("");
 		}
 		return (this.selectedElements.get(0).getName());
 	}
