@@ -53,7 +53,7 @@ public class JQueryJava {
 			System.out.println("Error : " + e.getMessage());
 		}
 		try {
-			return (Files.newOutputStream(Paths.get("example.xml"), 
+			return (Files.newOutputStream(Paths.get(name), 
 					StandardOpenOption.CREATE, 
 					StandardOpenOption.WRITE,
 					StandardOpenOption.TRUNCATE_EXISTING));
